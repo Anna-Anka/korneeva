@@ -1,0 +1,27 @@
+.message {
+    display: flex;
+    align-items: center;
+    color: $red-400;
+    font-size: 16px;
+    line-height: 1.1;
+
+    &__item {
+        padding: 2px 0;
+
+        &:not(:last-child) {
+            margin-right: 34px;
+        }
+    }
+
+    &__link {
+        @include under-line;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 24px;
+        padding-left: 36px;
+
+        &::before {
+            width: 83%;
+        }
+    }
+}

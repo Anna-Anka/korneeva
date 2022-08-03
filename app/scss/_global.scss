@@ -56,3 +56,19 @@ body {
 	clip: rect(0 0 0 0);
 	clip-path: inset(100%);
 }
+
+.logo {
+    display: inline-block;
+    
+    &__img {
+        width: 100%;
+        max-width: 330px;
+        height: 32px;
+        object-fit: contain;
+
+        @include mq("tablet") {
+            max-width: 249px;
+            height: 24px;
+        }
+    }
+}
