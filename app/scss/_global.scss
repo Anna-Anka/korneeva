@@ -1,0 +1,58 @@
+body {
+	color: $brown-700;
+	font-weight: $fw-400;
+	font-size: 20px;
+    font-family: $montserrat, Arial, sans-serif;
+	line-height: 1.6;
+	background-color: $white;
+}
+
+.container {
+	max-width: 1320px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+    @include mq("tablet") {
+        max-width: 1000px;
+        padding: 0 30px;
+    }
+
+    @include mq("phone") {
+        max-width: 360px;
+        padding: 0 19px;
+    }
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	border: 0;
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+}
