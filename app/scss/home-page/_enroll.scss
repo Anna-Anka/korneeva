@@ -1,0 +1,73 @@
+.enroll {
+    position: relative;
+    padding: 80px 0;
+    background-color: $red-400;
+
+    @include mq("phone") {
+        padding: 60px 0;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        color: $white;
+
+        @include mq("phone") {
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+
+    &__form {
+        .form__items {
+            display: flex;
+            margin-bottom: 25px;
+
+            @include mq("phone") {
+                flex-direction: column;
+            }
+        }
+
+        .form__item {
+            max-width: 300px;
+            margin-right: 10px;
+
+            @include mq("phone") {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+
+        .form__text {
+            color: rgba($white, 0.3);
+
+            @include mq("phone") {
+                text-align: center;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        max-width: 300px;
+
+        @include mq("phone") {
+            max-width: 100%;
+            padding: 25px 15px;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 100%;
+        max-width: 615px;
+        height: 100%;
+        @include background;
+
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+}
