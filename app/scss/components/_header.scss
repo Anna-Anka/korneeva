@@ -1,5 +1,5 @@
 .header {
-    padding: 36px 0;
+    padding: 40px 0 16px 0;
     color: $red-400;
 
     &__wrapper,
@@ -37,7 +37,7 @@
         margin-right: 52px;
 
         @include mq("tablet") {
-            flex-direction: column; 
+            flex-direction: column;
             margin-right: 67px;
             align-items: flex-start;
         }
@@ -77,37 +77,4 @@
             }
         }
     }
-
-    &__phone {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        padding-left: 31px;
-
-        
-
-        &::before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 24px;
-            height: 24px;
-            background-image: url('../img/icons/phone.svg');
-            content: "";
-            @include background;
-        }
-    }
-
-    &__tel {
-        margin-bottom: 3px;
-        font-size: 20px;
-        line-height: 1.1;
-    }
-
-    &__time {
-        @include under-line;
-        align-self: flex-start;
-        font-size: 14px;
-    }
-
 }

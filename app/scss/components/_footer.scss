@@ -1,3 +1,127 @@
 .footer {
-    
+    padding: 70px 0 88px;
+    color: $red-400;
+    background-color: $brown-700;
+
+    &__top {
+        padding-bottom: 60px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-bottom: 33px;
+    }
+
+    &__box,
+    &__items {
+        display: flex;
+        align-items: center;
+    }
+
+    &__box {
+        @include mq("tablet") {
+            flex-direction: column;
+        }
+    }
+
+    &__items {
+        @include mq("phone") {
+            flex-direction: column;
+        }
+    }
+
+    &__message {
+        margin-right: 60px;
+
+        @include mq("tablet") {
+            margin-right: 0;
+            margin-bottom: 60px;
+        }
+
+        @include mq("phone") {
+            flex-direction: column;
+            margin-bottom: 40px;
+        }
+
+        .message__item {
+            &:not(:last-child) {
+                margin-right: 60px;
+
+                @include mq("tablet") {
+                    margin-right: 54px;
+                }
+
+                @include mq("phone") {
+                    margin-right: 0;
+                    margin-bottom: 33px;
+                }
+            }
+        }
+    }
+
+    &__wrapper,
+    &__box,
+    &__items,
+    &__message {
+        @include mq("phone") {
+            align-items: flex-start;
+        }
+    }
+
+    &__contact {
+        &:not(:last-child) {
+            margin-right: 42px;
+
+            @include mq("phone") {
+                margin-right: 0;
+                margin-bottom: 46px;
+            }
+        }
+    }
+
+    &__bottom {
+        position: relative;
+        padding-top: 60px;
+
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: rgba($white, 0.1);
+            content: "";
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+
+        @include mq("phone") {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 60px;
+
+            @include mq("phone") {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-size: 14px;
+        text-decoration: underline;
+    }
 }

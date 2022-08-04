@@ -15,13 +15,63 @@
 
     &__link {
         @include under-line;
+        padding-left: 36px;
         background-repeat: no-repeat;
         background-position: left center;
         background-size: 24px;
-        padding-left: 36px;
 
         &::before {
-            width: 83%;
+            width: calc(100% - 37px);
         }
+    }
+}
+
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 31px;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        content: "";
+        @include background;
+    }
+
+    &--phone {
+        &::before {
+            background-image: url('../img/icons/phone.svg');
+        }
+    }
+
+    &--address {
+        &::before {
+            background-image: url('../img/icons/address.svg');
+        }
+
+        .contact__link {
+            margin-bottom: 0;
+        }
+    }
+
+    &__accent {
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    &__link {
+        margin-bottom: 3px;
+        font-size: 20px;
+        line-height: 1.1;
+    }
+
+    &__subtext {
+        @include under-line;
+        align-self: flex-start;
+        font-size: 14px;
     }
 }
