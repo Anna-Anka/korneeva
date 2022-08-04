@@ -5,6 +5,10 @@ body {
     font-family: $montserrat, Arial, sans-serif;
     line-height: 1.6;
     background-color: $white;
+
+    @include mq("phone") {
+        font-size: 16px;
+    }
 }
 
 .container {
@@ -46,6 +50,7 @@ body {
     color: $red-400;
     background-color: $white;
     padding: 15px;
+    font-size: 18px;
 
     &--border {
         color: $white;

@@ -1,0 +1,83 @@
+.advertising {
+    margin-bottom: 100px;
+    
+    &__container {
+        @include mq("phone") {
+            padding: 0;
+        }
+    }
+
+    &__wrapper {
+        background-color: $red-400;
+        border-radius: 30px;
+        position: relative;
+        padding: 60px;
+        z-index: 10;
+
+        @include mq("phone") {
+            padding: 60px 19px 350px;
+        }
+    }
+
+    &__content {
+        max-width: 540px;
+        width: 100%;
+
+        @include mq("phone") {
+            max-width: 100%;
+        }
+    }
+
+    &__title {
+        color: $white;
+        margin-bottom: 15px;
+
+        @include mq("phone") {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+        color: $white;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        @include mq("phone") {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__button {
+        padding: 15px 28px;
+
+        @include mq("phone") {
+            width: 100%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        @include background;
+        bottom: 0;
+        z-index: -10;
+        height: 442px;
+        right: 170px;
+        max-width: 528px;
+        width: 100%;
+
+        @include mq("tablet") {
+            right: 0;
+        }
+
+        @include mq("phone") {
+           height: 301px;
+           border-radius: 30px;
+        }
+    }
+}
