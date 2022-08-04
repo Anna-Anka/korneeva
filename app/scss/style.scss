@@ -8,11 +8,12 @@
 //Components
 @import 'components/message';
 @import 'components/header';
-@import 'home-page/gallery';
+@import 'components/gallery';
 @import 'components/footer';
 
 
 //Home
+@import 'home-page/bonuses';
 @import 'home-page/advertising';
 @import 'home-page/guarantee';
 @import 'home-page/enroll';
