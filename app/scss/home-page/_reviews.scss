@@ -1,9 +1,9 @@
 .reviews {
     &__box {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: relative;
 
         @include mq("tablet") {
             flex-direction: column;
@@ -21,9 +21,9 @@
         margin-bottom: 140px;
 
         @include mq("tablet") {
-            margin-bottom: 40px;
             max-width: 100%;
             max-width: 700px;
+            margin-bottom: 40px;
         }
     }
 
@@ -31,11 +31,12 @@
         margin-bottom: 30px;
 
         @include mq("tablet") {
-           max-width: 100%;
+            max-width: 100%;
         }
     }
 
     &__link {
+        margin-bottom: 140px;
         padding-right: 51px;
         padding-left: 51px;
         color: $white;
@@ -43,6 +44,7 @@
 
         @include mq("tablet") {
             width: fit-content;
+            margin-bottom: 0;
         }
     }
 
@@ -78,10 +80,10 @@
         }
 
         @include mq("phone") {
-            bottom: 0;
-            right: 50%;
-            transform: translateX(50%);
             top: unset;
+            right: 50%;
+            bottom: 0;
+            transform: translateX(50%);
         }
     }
 

@@ -1,0 +1,41 @@
+<section class="offers section">
+    <div class="container">
+        <div class="offers__title title">
+            <span class="title__numbers">04</span>
+            <h2 class="title__content">
+                Приятные предложения этого месяца
+            </h2>
+        </div>
+    </div>
+    <div class="offers__container container">
+        <ul class="offers__items">
+            <li class="offers__item">
+                @include('../components/_offer-card.html', {
+                    'accent' : 'false',
+                    'subtitle' : 'Маникюр',
+                    'price' : '1 600 ',
+                    'price-old' : '2500',
+                    'text' : 'Снятие + маникюр + выравнивание + покрытие гель лак'
+                })
+            </li>
+            <li class="offers__item">
+                @include('../components/_offer-card.html', {
+                    'accent' : 'false',
+                'subtitle' : 'Маникюр',
+                'price' : '1 600 ',
+                'price-old' : '2500',
+                'text' : 'Снятие + педикюр + покрытие гель лак'
+                })
+            </li>
+            <li class="offers__item">
+                @include('../components/_offer-card.html', {
+                'accent' : 'true',
+                'subtitle' : 'Маникюр + педикюр',
+                'price' : '3500 ',
+                'price-old' : '4000',
+                'text' : 'Все включено'
+                })
+            </li>
+        </ul>
+    </div>
+</section>

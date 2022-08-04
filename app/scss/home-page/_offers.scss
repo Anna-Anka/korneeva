@@ -1,0 +1,44 @@
+.offers {
+    &__title {
+        max-width: 630px;
+    }
+
+    &__container {
+        @include mq("phone") {
+            padding: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+
+        @include mq("phone") {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        display: flex;
+        width: 100%;
+        max-width: 410px;
+        border-radius: 15px;
+        box-shadow: 0 15px 60px rgba($dark-800, 0.13);
+
+        @include mq("phone") {
+            max-width: 100%;
+        }
+
+        &:not(:last-child) {
+            margin-right: 30px;
+
+            @include mq("tablet") {
+                margin-right: 20px;
+            }
+
+            @include mq("phone") {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

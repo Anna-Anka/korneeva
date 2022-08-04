@@ -9,10 +9,12 @@
 @import 'components/message';
 @import 'components/header';
 @import 'components/gallery';
+@import 'components/offer-card';
 @import 'components/footer';
 
 
 //Home
+@import 'home-page/offers';
 @import 'home-page/reviews';
 @import 'home-page/bonuses';
 @import 'home-page/advertising';

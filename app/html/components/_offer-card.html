@@ -1,0 +1,48 @@
+@if (context.accent === 'false') {
+<article class="offer-card">
+    <div class="offer-card__content">
+        <h3 class="offer-card__subtitle">
+            @subtitle
+        </h3>
+        <div class="offer-card__prices">
+            <span class="offer-card__price">
+                @price ₽
+            </span>
+            <span class="offer-card__price offer-card__price--old">
+                @price-old ₽
+            </span>
+        </div>
+        <p class="offer-card__text">
+            @text
+        </p>
+    </div>
+    <button class="offer-card__button button" type="button">
+        Записаться
+    </button>
+</article>
+}
+
+@if (context.accent === 'true') {
+    <article class="offer-card offer-card--accent">
+        <div class="offer-card__content">
+            <h3 class="offer-card__subtitle">
+                <span class="offer-card__super">Самое выгодное</span>
+                @subtitle
+            </h3>
+            <div class="offer-card__prices">
+                <span class="offer-card__price">
+                    @price ₽
+                </span>
+                <span class="offer-card__price offer-card__price--old">
+                    @price-old ₽
+                </span>
+            </div>
+            <p class="offer-card__text">
+                @text
+            </p>
+        </div>
+        <button class="offer-card__button button" type="button">
+            Записаться
+        </button>
+    </article>
+}

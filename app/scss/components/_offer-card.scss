@@ -1,0 +1,112 @@
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+
+    &--accent {
+        background-color: $red-400;
+
+        .offer-card__subtitle,
+        .offer-card__text {
+            color: $white;
+        }
+
+        .offer-card__price {
+            color: $red-400;
+            background-color: $white;
+
+            &--old {
+                color: $pink-400;
+                background-color: transparent;
+            }
+        }
+
+        .offer-card__super {
+            display: inline-block;
+            margin-bottom: 10px;
+            color: rgba($white, 0.5);
+            font-weight: $fw-400;
+            font-size: 14px;
+            line-height: 1.6;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        .offer-card__button {
+            color: $red-400;
+            background-color: $white;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 64px;
+        padding: 40px 58px 0;
+        text-align: center;
+
+        @include mq("tablet") {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        @include mq("phone") {
+            padding-right: 26px;
+            padding-left: 26px;
+            font-size: 20px;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 15px;
+        color: $brown-700;
+        font-weight: $fw-700;
+        font-size: 28px;
+    }
+
+    &__subtitle,
+    &__price {
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+    }
+
+    &__prices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    &__price {
+        margin-bottom: 14px;
+        padding: 10px 22px;
+        color: $white;
+        font-weight: $fw-400;
+        font-size: 24px;
+        background-color: $red-400;
+        border-radius: 100px;
+
+        &--old {
+            margin-bottom: 0;
+            padding: 0;
+            color: rgba($brown-700, 0.5);
+            font-size: 16px;
+            text-decoration: line-through;
+            background-color: transparent;
+        }
+    }
+
+    &__text {
+        color: rgba($brown-700, 0.5);
+    }
+
+    &__button {
+        width: 100%;
+        padding: 25px 10px;
+        color: $white;
+        background-color: $red-400;
+        border-radius: 15px;
+    }
+}
