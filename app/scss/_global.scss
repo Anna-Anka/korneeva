@@ -103,11 +103,6 @@ body {
 
 .title {
     margin-bottom: 60px;
-    color: $brown-700;
-    font-weight: $fw-700;
-    font-size: 50px;
-    line-height: 1.1;
-    letter-spacing: -0.05em;
 
     @include mq("tablet") {
         margin-bottom: 40px;
@@ -115,7 +110,18 @@ body {
 
     @include mq("phone") {
         margin-bottom: 30px;
-        font-size: 36px;
+    }
+
+    &__content {
+        color: $brown-700;
+        font-weight: $fw-700;
+        font-size: 50px;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+
+        @include mq("phone") {
+            font-size: 36px;
+        }
     }
 
     &__number {
@@ -127,6 +133,7 @@ body {
         font-weight: $fw-400;
         font-size: 20px;
         line-height: 1.6;
+        letter-spacing: 0;
 
         &::before {
             position: absolute;

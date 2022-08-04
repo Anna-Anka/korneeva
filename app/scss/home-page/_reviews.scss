@@ -1,0 +1,91 @@
+.reviews {
+    &__box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        @include mq("tablet") {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include mq("phone") {
+            padding-bottom: 90px;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 375px;
+        margin-bottom: 140px;
+
+        @include mq("tablet") {
+            margin-bottom: 40px;
+            max-width: 100%;
+            max-width: 700px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        @include mq("tablet") {
+           max-width: 100%;
+        }
+    }
+
+    &__link {
+        padding-right: 51px;
+        padding-left: 51px;
+        color: $white;
+        background-color: $red-400;
+
+        @include mq("tablet") {
+            width: fit-content;
+        }
+    }
+
+    &__swiper {
+        width: 100%;
+        max-width: 850px;
+        margin: 0;
+        border-radius: 15px;
+        box-shadow: 0 15px 60px rgba($dark-800, 0.13);
+
+        @include mq("tablet") {
+            max-width: 100%;
+        }
+    }
+
+    &__item {
+        height: 370px;
+    }
+
+    &__img {
+        @include mq("tablet") {
+            object-fit: contain;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        @include mq("tablet") {
+            position: absolute;
+            top: 35px;
+            right: 0;
+        }
+
+        @include mq("phone") {
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            top: unset;
+        }
+    }
+
+    &__button {
+        @include slider-arrow;
+    }
+}
