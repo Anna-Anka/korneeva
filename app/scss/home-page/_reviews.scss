@@ -102,4 +102,8 @@
     &__button {
         @include slider-arrow;
     }
+
+    .swiper-button-disabled {
+        @include slider-disabled
+    }
 }

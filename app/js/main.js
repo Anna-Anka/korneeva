@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 1000: {
                     allowTouchMove: true,
                 },
-                
+
                 360: {
                     allowTouchMove: false,
                 },
@@ -27,7 +27,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (document.querySelector('.gallery')) {
+    if(document.querySelector('.works')) {
+        const sliderWorks = document.querySelector('.works__swiper');
+        const swiperWorks = new Swiper(sliderWorks, {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 0,
+
+            navigation: {
+                nextEl: '.works__button--next',
+                prevEl: '.works__button--prev',
+            },
+        });
+    }
+
+    if (document.querySelector('.studio')) {
         const mediaQuery = window.matchMedia('(max-width: 1000px)')
 
         function handleTabletChange(e) {

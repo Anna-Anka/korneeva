@@ -110,3 +110,12 @@ $breakpoints: ("phone": 1000px,
         }
     }
 }
+
+@mixin slider-disabled {
+    opacity: 1;
+    background-color: rgba($red-400, 0.1);
+
+    &::after {
+        filter: invert(95%) sepia(39%) saturate(5482%) hue-rotate(341deg) brightness(93%) contrast(91%);
+    }
+}

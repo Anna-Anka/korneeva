@@ -183,14 +183,3 @@ body {
         font-size: 14px;
     }
 }
-
-.swiper {
-    .swiper-button-disabled {
-        background-color: rgba($red-400, 0.1);
-        opacity: 1;
-
-        &::after {
-            filter: invert(95%) sepia(39%) saturate(5482%) hue-rotate(341deg) brightness(93%) contrast(91%);
-        }
-    }
-}
