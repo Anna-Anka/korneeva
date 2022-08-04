@@ -1,14 +1,14 @@
 @import 'fonts';
 @import 'vars';
 @import 'reset';
-
 @import 'mixins';
-//@import 'libs';
+@import 'libs';
 @import 'global';
 
 //Components
 @import 'components/message';
 @import 'components/header';
+@import 'home-page/gallery';
 @import 'components/footer';
 
 

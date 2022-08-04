@@ -20,6 +20,7 @@
     font-size: 14px;
     @include line-clamp(3);
 }
+
 //////////////////////////////////////////////////////////////
 
 //Адаптив
@@ -74,5 +75,37 @@ $breakpoints: ("phone": 1000px,
         height: 1px;
         border: 1px dashed $red-400;
         content: "";
+    }
+}
+
+@mixin slider-arrow {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-top: 0;
+    color: transparent;
+    background-color: $red-400;
+    border-radius: 50%;
+
+    &::after {
+        font-size: 0;
+        @include background;
+        width: 35px;
+        height: 15px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        content: "";
+        position: absolute;
+        fill: $white;
+        background-image: url('../img/sprite/arrow.svg');
+    }
+
+    &--prev {
+        margin-right: 40px;
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
     }
 }

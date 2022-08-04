@@ -1,6 +1,5 @@
 .advertising {
-    margin-bottom: 100px;
-    
+
     &__container {
         @include mq("phone") {
             padding: 0;
@@ -8,11 +7,11 @@
     }
 
     &__wrapper {
+        position: relative;
+        z-index: 10;
+        padding: 60px;
         background-color: $red-400;
         border-radius: 30px;
-        position: relative;
-        padding: 60px;
-        z-index: 10;
 
         @include mq("phone") {
             padding: 60px 19px 350px;
@@ -20,8 +19,8 @@
     }
 
     &__content {
-        max-width: 540px;
         width: 100%;
+        max-width: 540px;
 
         @include mq("phone") {
             max-width: 100%;
@@ -29,8 +28,8 @@
     }
 
     &__title {
-        color: $white;
         margin-bottom: 15px;
+        color: $white;
 
         @include mq("phone") {
             margin-bottom: 20px;
@@ -63,21 +62,21 @@
 
     &__img {
         position: absolute;
-        @include background;
+        right: 170px;
         bottom: 0;
         z-index: -10;
-        height: 442px;
-        right: 170px;
-        max-width: 528px;
         width: 100%;
+        max-width: 528px;
+        height: 442px;
+        @include background;
 
         @include mq("tablet") {
             right: 0;
         }
 
         @include mq("phone") {
-           height: 301px;
-           border-radius: 30px;
+            height: 299px;
+            border-radius: 30px;
         }
     }
 }
