@@ -1,0 +1,36 @@
+.services {
+    position: relative;
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 410px);
+        gap: 30px;
+        margin-bottom: 60px;
+
+        @include mq("tablet") {
+            grid-template-columns: repeat(2, 460px);
+            gap: 20px;
+        }
+
+        @include mq("phone") {
+            margin-bottom: 30px;
+            grid-template-columns: 322px;
+        }
+    }
+
+    &__item {
+        border-radius: 15px;
+        box-shadow: 0 15px 60px rgba($dark-800, 0.13);
+    }
+
+    &__link {
+        width: fit-content;
+        margin: 0 auto;
+        padding-right: 75px;
+        padding-left: 75px;
+
+        @include mq("phone") {
+            width: 100%;
+        }
+    }
+}

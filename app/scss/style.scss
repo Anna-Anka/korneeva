@@ -9,11 +9,15 @@
 @import 'components/message';
 @import 'components/header';
 @import 'components/gallery';
+
 @import 'components/offer-card';
+@import 'components/service-card';
+
 @import 'components/footer';
 
 
 //Home
+@import 'home-page/services';
 @import 'home-page/works';
 @import 'home-page/calculate';
 @import 'home-page/offers';

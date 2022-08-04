@@ -1,0 +1,148 @@
+.service-card {
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: background-color 0.4s;
+
+
+    &:hover {
+        background-color: $red-400;
+
+        .service-card__price,
+        .service-card__title {
+            color: $white;
+        }
+
+        .service-card__item {
+            color: rgba($white, 0.5);
+
+            &::before {
+                background-color: rgba($white, 0.5);
+            }
+        }
+
+        &::before {
+            background-color: rgba($white, 0.15);
+        }
+
+        &::after {
+            filter: invert(100%) sepia(0%) saturate(7427%) hue-rotate(34deg) brightness(120%) contrast(105%);
+        }
+    }
+
+
+    &__link {
+        display: block;
+        padding: 30px 30px 40px 110px;
+    }
+
+    &--manicure {
+        &::after {
+            background-image: url('../img/services/manicure.svg');
+        }
+    }
+
+    &--pedicure {
+        &::after {
+            background-image: url('../img/services/pedicure.svg');
+        }
+    }
+
+    &--building {
+        &::after {
+            background-image: url('../img/services/building.svg');
+        }
+    }
+
+    &--design {
+        &::after {
+            background-image: url('../img/services/design.svg');
+        }
+    }
+
+    &--podology {
+        &::after {
+            background-image: url('../img/services/podology.svg');
+        }
+    }
+
+    &--learn {
+        &::after {
+            background-image: url('../img/services/learn.svg');
+        }
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+    }
+
+    &::after {
+        top: 30px;
+        left: 30px;
+        width: 60px;
+        height: 60px;
+        @include background;
+    }
+
+    &::before {
+        top: -70px;
+        left: -65px;
+        width: 212px;
+        height: 212px;
+        background-color: rgba($red-400, 0.05);
+        background-repeat: no-repeat;
+        border-radius: 100%;
+        transition: background-color 0.4s;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        color: $brown-700;
+        font-weight: $fw-700;
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+    }
+
+    &__items {
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 33px;
+        color: rgba($brown-700, 0.5);
+
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 28px;
+            height: 1px;
+            background-color: rgba($brown-700, 0.5);
+            transition: background-color 0.4s;
+            content: "";
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+
+    &__price {
+        color: $red-400;
+        font-weight: $fw-700;
+        font-size: 16px;
+        line-height: 1.1;
+        text-transform: uppercase;
+    }
+
+    &__title,
+    &__item,
+    &__price {
+        transition: color 0.4s;
+    }
+}

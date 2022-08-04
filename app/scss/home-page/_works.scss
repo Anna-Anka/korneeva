@@ -54,15 +54,15 @@
     }
 
     &__buttons {
-        display: flex;
         position: absolute;
         top: 30px;
         right: 0;
+        display: flex;
 
         @include mq("phone") {
-            bottom: 0;
             top: unset;
             right: 50%;
+            bottom: 0;
             transform: translateX(50%);
         }
     }
