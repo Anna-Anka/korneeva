@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerGroup: 1,
             spaceBetween: 0,
 
+            breakpoints: {
+                1000: {
+                    allowTouchMove: true,
+                },
+                
+                360: {
+                    allowTouchMove: false,
+                },
+            },
+
             navigation: {
                 nextEl: '.reviews__button--next',
                 prevEl: '.reviews__button--prev',

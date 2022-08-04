@@ -1,0 +1,98 @@
+.calculate {
+    padding: 92px 0 110px;
+    background-color: $gray-100;
+
+    @include mq("phone") {
+        padding: 60px 0;
+    }
+
+    &__wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 228px;
+
+        @include mq("phone") {
+            padding-bottom: 428px;
+        }
+    }
+
+    &__content {
+        z-index: 2;
+        width: 100%;
+        max-width: 550px;
+
+        @include mq("tablet") {
+            max-width: 530px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 50px;
+        color: rgba($brown-700, 0.5);
+
+        @include mq("tablet") {
+            max-width: 460px;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &__link {
+        width: fit-content;
+        padding-right: 27px;
+        padding-left: 27px;
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        max-width: 637px;
+        height: 582px;
+        background-size: cover;
+        @include background;
+
+        &::before {
+            position: absolute;
+            top: -25px;
+            right: -55px;
+            width: 737px;
+            height: 672px;
+            background-image: url('../img/calculate.png');
+            background-size: cover;
+            opacity: 0.1;
+            content: "";
+            @include background;
+
+            @include mq("phone") {
+                top: -20px;
+                right: -30px;
+                width: 425px;
+                height: 388px;
+            }
+        }
+
+        @include mq("tablet") {
+            position: absolute;
+            top: 0;
+            right: -140px;
+        }
+
+        @include mq("phone") {
+            top: unset;
+            right: -20px;
+            bottom: 0;
+            width: 367px;
+            height: 335px;
+        }
+    }
+}

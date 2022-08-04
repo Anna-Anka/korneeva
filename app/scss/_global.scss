@@ -57,6 +57,11 @@ body {
         background-color: transparent;
         border: 1px solid $white;
     }
+
+    &--accent {
+        background-color: $red-400;
+        color: $white;
+    }
 }
 
 .sr-only {

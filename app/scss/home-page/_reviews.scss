@@ -64,9 +64,21 @@
         height: 370px;
     }
 
+    &__image {
+        @include mq("phone") {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            overflow-x: scroll;
+        }
+    }
+
     &__img {
-        @include mq("tablet") {
-            object-fit: contain;
+        @include mq("phone") {
+            position: absolute;
+            top: 0;
+            max-width: 850px;
         }
     }
 

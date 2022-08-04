@@ -14,9 +14,12 @@
 
 
 //Home
+@import 'home-page/calculate';
 @import 'home-page/offers';
 @import 'home-page/reviews';
 @import 'home-page/bonuses';
 @import 'home-page/advertising';
 @import 'home-page/guarantee';
 @import 'home-page/enroll';
+
+//TODO некоторым кнопкам добавить новый класс
