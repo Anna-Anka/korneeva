@@ -63,13 +63,13 @@
     }
 
     &__img {
-        background-repeat: no-repeat;
-        background-position: right;
         position: absolute;
         top: 0;
         right: -5px;
         width: 28%;
         height: 100%;
+        background-repeat: no-repeat;
+        background-position: right;
         background-size: cover;
 
 
