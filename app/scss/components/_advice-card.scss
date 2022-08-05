@@ -1,15 +1,15 @@
 .advice-card {
+    position: relative;
+    height: 100%;
     padding: 133px 16px 40px;
     color: $brown-700;
     text-align: center;
-    position: relative;
-    transition: background-color 0.4s, color 0.4s;
     border-radius: 15px;
-    height: 100%;
+    transition: background-color 0.4s, color 0.4s;
 
     @include mq("tablet") {
-        padding-left: 24px;
         padding-right: 24px;
+        padding-left: 24px;
     }
 
     &:hover {
@@ -19,12 +19,12 @@
 
     &::before {
         position: absolute;
-        content: "";
-        left: 50%;
-        transform: translateX(-50%);
         top: 44px;
+        left: 50%;
         width: 64px;
         height: 64px;
+        transform: translateX(-50%);
+        content: "";
         @include background;
     }
 

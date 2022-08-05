@@ -44,13 +44,13 @@
 
         @include mq("tablet") {
             max-width: 460px;
-            margin: 0 20px 20px 0;
             min-height: 387px;
+            margin: 0 20px 20px 0;
         }
 
         @include mq("phone") {
-            margin-right: 0;
             width: 113%;
+            margin-right: 0;
         }
 
         &--big {
@@ -81,17 +81,17 @@
         }
 
         @include mq("tablet") {
-            max-width: 460px;
-            bottom: 50px;
-            right: 0;
             position: absolute;
+            right: 0;
+            bottom: 50px;
+            max-width: 460px;
         }
 
         @include mq("phone") {
-            max-width: 100%;
-            bottom: unset;
-            right: unset;
             position: relative;
+            right: unset;
+            bottom: unset;
+            max-width: 100%;
         }
     }
 }

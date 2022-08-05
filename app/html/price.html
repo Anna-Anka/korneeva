@@ -1,0 +1,25 @@
+@include('./components/_head.html', {
+'title' : 'KORNEEVA NAIL — услуги маникюра и педикюра | Цены'
+})
+
+@include('./components/_header.html')
+
+<main class="page">
+    <div class="back">
+        <div class="container">
+            <a class="back__link" href="#">
+                Вернуться
+            </a>
+        </div>
+    </div>
+    <h1 class="sr-only">Цены на наши услуги</h1>
+    @include('./price-page/_manicure.html')
+    @include('./price-page/_pedicure.html')
+    @include('./price-page/_coatings.html')
+    @include('./price-page/_building.html')
+    @include('./price-page/_design.html')
+    @include('./price-page/_four.html')
+</main>
+
+@include('./components/_footer.html')
+@include('./components/_bottom.html')

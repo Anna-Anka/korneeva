@@ -59,8 +59,8 @@ body {
     }
 
     &--accent {
-        background-color: $red-400;
         color: $white;
+        background-color: $red-400;
     }
 }
 
@@ -185,5 +185,37 @@ body {
 
     &__text {
         font-size: 14px;
+    }
+}
+
+.back {
+    margin-bottom: 20px;
+    padding-top: 136px;
+
+    @include mq("tablet") {
+        padding-top: 117px;
+    }
+
+    @include mq("phone") {
+        padding-top: 80px;
+    }
+
+    &__link {
+        position: relative;
+        padding-left: 19px;
+        color: $red-400;
+        font-size: 18px;
+        line-height: 1.1;
+
+        &::before {
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 9px;
+            height: 19px;
+            background-image: url('../img/sprite/back.svg');
+            content: "";
+            @include background;
+        }
     }
 }
