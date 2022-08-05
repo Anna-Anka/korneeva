@@ -1,0 +1,60 @@
+.politics {
+    padding: 130px 0 100px;
+
+    @include mq("tablet") {
+        padding-top: 115px;
+    }
+
+    @include mq("tablet") {
+        padding: 60px 0;
+    }
+
+    &__title {
+        width: 100%;
+        max-width: 880px;
+        margin-bottom: 60px;
+        color: $brown-700;
+        font-weight: $fw-700;
+        font-size: 50px;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+
+        @include mq("phone") {
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+    }
+
+    h2,
+    h3 {
+        margin: 0;
+        font-weight: $fw-600;
+        font-size: 20px;
+        line-height: 1.6;
+
+        @include mq("phone") {
+            font-size: 16px;
+        }
+    }
+
+    &__agreement {
+        h3 {
+            font-weight: $fw-400;
+        }
+    }
+
+    &__items,
+    &__text {
+        margin-bottom: 25px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+
+    ol {
+        padding-left: 23px;
+    }
+}
