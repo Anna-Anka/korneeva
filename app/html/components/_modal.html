@@ -1,0 +1,41 @@
+<section class="modal">
+    <div class="modal__content">
+        <button class="modal__close" type="button">
+            <span class="sr-only">Закрыть модальное окно</span>
+        </button>
+        <h2 class="modal__title">
+            Запишитесь на наши услуги
+        </h2>
+        <form class="modal__form form" action="#">
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="modal__name">Введите ваше имя</label>
+                    <input class="form__field" name="name" id="modal__name" type="name" placeholder="Имя" required>
+                </div>
+                <div class="form__item">
+                    <label class="sr-only" for="modal__phone">Введите ваше имя</label>
+                    <input class="form__field form__field--phone" name="phone" id="modal__phone" type="tel" placeholder="+7 (___) ___-__-__" data-inputmask="'mask': '+ 7 ( 999 ) 999 - 99 - 99'" required>
+                </div>
+            </div>
+            <button class="modal__button button button--accent" type="submit">Записаться</button>
+            <p class="form__text">
+                Нажимая на кнопку «Записаться», вы соглашаетесь с
+                <a href="#">
+                    политикой конфиденциальности*
+                </a>
+            </p>
+        </form>
+        <ul class="modal__message message">
+            <li class="message__item">
+                <a class="message__link" href="#" style="background-image: url('img/message/telegram.svg')">
+                    Написать в Telegram
+                </a>
+            </li>
+            <li class="message__item">
+                <a class="message__link" href="#" style="background-image: url('img/message/whatsapp.svg')">
+                    Написать в WhatsApp
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>

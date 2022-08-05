@@ -36,7 +36,7 @@
     }
 
     &__message {
-        margin-right: 60px;
+        margin-right: 50px;
 
         @include mq("tablet") {
             margin-right: 0;

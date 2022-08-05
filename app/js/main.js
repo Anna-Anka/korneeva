@@ -1,6 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.form__field--phone')) {
-         $('.form__field--phone').inputmask();
+        $('.form__field--phone').inputmask();
+    }
+
+    if (document.querySelector('.modal')) {
+        const modalOpen = document.querySelectorAll('.modal-open');
+        modalOpen.forEach(item => {
+            item.addEventListener('click', () => {
+                document.querySelector('.modal').classList.add('modal--active')
+            })
+        })
+
+        document.querySelector('.modal__close').onclick = function () {
+            document.querySelector('.modal').classList.remove('modal--active');
+        };
+
+        const modal = document.querySelector('.modal__content');
+        document.addEventListener('mousedown', (e) => {
+            if (!modal.contains(e.target)) {
+                document.querySelector('.modal').classList.remove('modal--active');
+            }
+        });
     }
 
     if (document.querySelector('.reviews')) {
@@ -27,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if(document.querySelector('.works')) {
+    if (document.querySelector('.works')) {
         const sliderWorks = document.querySelector('.works__swiper');
         const swiperWorks = new Swiper(sliderWorks, {
             slidesPerView: 1,

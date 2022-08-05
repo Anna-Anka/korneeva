@@ -12,6 +12,47 @@
 <body>
     <div class="wrapper">
 
+<section class="modal">
+    <div class="modal__content">
+        <button class="modal__close" type="button">
+            <span class="sr-only">Закрыть модальное окно</span>
+        </button>
+        <h2 class="modal__title">
+            Запишитесь на наши услуги
+        </h2>
+        <form class="modal__form form" action="#">
+            <div class="form__items">
+                <div class="form__item">
+                    <label class="sr-only" for="modal__name">Введите ваше имя</label>
+                    <input class="form__field" name="name" id="modal__name" type="name" placeholder="Имя" required>
+                </div>
+                <div class="form__item">
+                    <label class="sr-only" for="modal__phone">Введите ваше имя</label>
+                    <input class="form__field form__field--phone" name="phone" id="modal__phone" type="tel" placeholder="+7 (___) ___-__-__" data-inputmask="'mask': '+ 7 ( 999 ) 999 - 99 - 99'" required>
+                </div>
+            </div>
+            <button class="modal__button button button--accent" type="submit">Записаться</button>
+            <p class="form__text">
+                Нажимая на кнопку «Записаться», вы соглашаетесь с
+                <a href="#">
+                    политикой конфиденциальности*
+                </a>
+            </p>
+        </form>
+        <ul class="modal__message message">
+            <li class="message__item">
+                <a class="message__link" href="#" style="background-image: url('img/message/telegram.svg')">
+                    Написать в Telegram
+                </a>
+            </li>
+            <li class="message__item">
+                <a class="message__link" href="#" style="background-image: url('img/message/whatsapp.svg')">
+                    Написать в WhatsApp
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
 <header class="header">
     <div class="container">
         <div class="header__wrapper">
@@ -44,6 +85,7 @@
     </div>
 </header>
 
+
 <main class="page">
     <h1 class="sr-only">KORNEEVA NAIL — услуги маникюра и педикюра</h1>
     <section class="main">
@@ -59,12 +101,12 @@
                 </p>
                 <ul class="main__buttons">
                     <li class="main__item">
-                        <button class="main__button button button--accent" type="button">
+                        <button class="main__button button button--accent modal-open" type="button">
                             Оставить заявку
                         </button>
                     </li>
                     <li class="main__item">
-                        <button class="main__button main__button--border button" type="button">
+                        <button class="main__button main__button--border button modal-open" type="button">
                             Записаться сейчас
                         </button>
                     </li>
@@ -74,7 +116,7 @@
                 <span class="sr-only">
                     Посмотреть видео
                 </span>
-                <span class="main__play" style="background-image: url('img/icons/play.svg');"></span>
+                <span class="main__play"></span>
             </a>
         </div>
     </div>
@@ -90,7 +132,7 @@
         <ul class="services__items">
             <li class="services__item">
                 <article class="service-card service-card--manicure">
-    <a class="service-card__link" href="#">
+    <a class="service-card__link modal-open" href="#">
         <div class="service-card__content">
             <h3 class="service-card__title">
                 Маникюр
@@ -112,7 +154,7 @@
             </li>
             <li class="services__item">
                 <article class="service-card service-card--pedicure">
-    <a class="service-card__link" href="#">
+    <a class="service-card__link modal-open" href="#">
         <div class="service-card__content">
             <h3 class="service-card__title">
                 Педикюр
@@ -134,7 +176,7 @@
             </li>
             <li class="services__item">
                 <article class="service-card service-card--building">
-    <a class="service-card__link" href="#">
+    <a class="service-card__link modal-open" href="#">
         <div class="service-card__content">
             <h3 class="service-card__title">
                 Наращивание
@@ -156,7 +198,7 @@
             </li>
             <li class="services__item">
                 <article class="service-card service-card--design">
-    <a class="service-card__link" href="#">
+    <a class="service-card__link modal-open" href="#">
         <div class="service-card__content">
             <h3 class="service-card__title">
                 Дизайн
@@ -178,7 +220,7 @@
             </li>
             <li class="services__item">
                 <article class="service-card service-card--podology">
-    <a class="service-card__link" href="#">
+    <a class="service-card__link modal-open" href="#">
         <div class="service-card__content">
             <h3 class="service-card__title">
                 Подология
@@ -200,7 +242,7 @@
             </li>
             <li class="services__item">
                 <article class="service-card service-card--learn">
-    <a class="service-card__link" href="#">
+    <a class="service-card__link modal-open" href="#">
         <div class="service-card__content">
             <h3 class="service-card__title">
                 Обучение
@@ -340,7 +382,7 @@
             Снятие + маникюр + выравнивание + покрытие гель лак
         </p>
     </div>
-    <button class="offer-card__button button" type="button">
+    <button class="offer-card__button button button--accent modal-open" type="button">
         Записаться
     </button>
 </article>
@@ -367,7 +409,7 @@
             Снятие + педикюр + покрытие гель лак
         </p>
     </div>
-    <button class="offer-card__button button" type="button">
+    <button class="offer-card__button button button--accent modal-open" type="button">
         Записаться
     </button>
 </article>
@@ -397,7 +439,7 @@
                 Все включено
             </p>
         </div>
-        <button class="offer-card__button button" type="button">
+        <button class="offer-card__button button modal-open" type="button">
             Записаться
         </button>
     </article>
@@ -477,7 +519,7 @@
                     <a class="bonuses__button button" href="#">
                         Прайс-лист
                     </a>
-                    <button class="bonuses__button button button--border" type="button">
+                    <button class="bonuses__button button button--border modal-open" type="button">
                         Записаться сейчас
                     </button>
                 </div>

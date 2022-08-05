@@ -117,6 +117,7 @@
     }
 
     &__item {
+        width: 100%;
         max-width: 250px;
 
         &:not(:last-child) {
@@ -148,6 +149,9 @@
 
     &__video {
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         max-width: 674px;
         height: 592px;
@@ -197,6 +201,26 @@
                 width: 432px;
                 height: 380px;
             }
+        }
+    }
+
+    &__play {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        background-color: $white;
+        background-image: url('../img/sprite/play.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px;
+        border-radius: 100%;
+        box-shadow: 0 0 0 0 rgba($white, 0.3);
+        animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    }
+
+    @keyframes pulse {
+        to {
+            box-shadow: 0 0 0 45px rgba($white, 0);
         }
     }
 }
