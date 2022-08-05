@@ -7,6 +7,14 @@
         }
     }
 
+    &__title {
+        .title__content {
+            @include mq("phone") {
+                font-size: 36px;
+            }
+        }
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -103,11 +111,11 @@
     }
 
     &__img {
+        @include background;
         width: 100%;
         max-width: 630px;
-        border-radius: 30px;
-        @include background;
         background-size: cover;
+        border-radius: 30px;
 
         @include mq("tablet") {
             max-width: 308px;

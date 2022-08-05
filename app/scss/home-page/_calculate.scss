@@ -1,9 +1,9 @@
 .calculate {
-    padding: 92px 0 110px;
+    padding-top: 92px;
     background-color: $gray-100;
 
     @include mq("phone") {
-        padding: 60px 0;
+        padding-top: 60px;
     }
 
     &__wrapper {
@@ -11,10 +11,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding-bottom: 228px;
+        padding-bottom: 110px;
+
+        @include mq("tablet") {
+            padding-bottom: 360px;
+        }
 
         @include mq("phone") {
-            padding-bottom: 428px;
+            padding-bottom: 480px;
         }
     }
 
@@ -90,7 +94,7 @@
         @include mq("phone") {
             top: unset;
             right: -20px;
-            bottom: 0;
+            bottom: 98px;
             width: 367px;
             height: 335px;
         }
