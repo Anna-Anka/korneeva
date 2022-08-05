@@ -1,0 +1,68 @@
+.advice-card {
+    padding: 133px 16px 40px;
+    color: $brown-700;
+    text-align: center;
+    position: relative;
+    transition: background-color 0.4s, color 0.4s;
+    border-radius: 15px;
+    height: 100%;
+
+    @include mq("tablet") {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    &:hover {
+        color: $white;
+        background-color: $red-400;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        top: 44px;
+        width: 64px;
+        height: 64px;
+        @include background;
+    }
+
+    &--gloves {
+        &::before {
+            background-image: url('../img/advices/gloves.svg');
+        }
+    }
+
+    &--deadline {
+        &::before {
+            background-image: url('../img/advices/deadline.svg');
+        }
+    }
+
+    &--care {
+        &::before {
+            background-image: url('../img/advices/care.svg');
+        }
+    }
+
+    &--saw {
+        &::before {
+            background-image: url('../img/advices/saw.svg');
+        }
+    }
+
+    &--temperature {
+        &::before {
+            background-image: url('../img/advices/temperature.svg');
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: $fw-700;
+        font-size: 28px;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+    }
+}

@@ -12,6 +12,7 @@
 
 @import 'components/offer-card';
 @import 'components/service-card';
+@import 'components/advice-card';
 
 @import 'components/footer';
 
@@ -31,4 +32,6 @@
 //guarantee-page
 @import 'guarantee-page/guarantee-about';
 @import 'guarantee-page/deadline';
+@import 'guarantee-page/advices';
+
 //TODO некоторым кнопкам добавить новый класс
