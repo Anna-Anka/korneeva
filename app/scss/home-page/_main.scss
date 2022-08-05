@@ -1,0 +1,202 @@
+.main {
+    position: relative;
+    padding: 80px 0 15px;
+
+    &::before,
+    &::after {
+        position: absolute;
+        width: 100%;
+        content: "";
+        @include background;
+    }
+
+    &::before {
+        bottom: -30%;
+        left: -5%;
+        max-width: 322px;
+        height: 416px;
+        background-image: url('../img/main/decor-left.png');
+        opacity: 0.15;
+
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+
+    &::after {
+        top: -10px;
+        right: -15%;
+        max-width: 605px;
+        height: 466px;
+        background-image: url('../img/main/decor-right.png');
+        opacity: 0.05;
+
+        @include mq("phone") {
+            display: none;
+        }
+    }
+
+    @include mq("tablet") {
+        padding: 160px 0 101px;
+    }
+
+    @include mq("phone") {
+        padding: 60px 0 46px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include mq("tablet") {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 570px;
+
+        @include mq("tablet") {
+            margin-bottom: 120px;
+        }
+
+        @include mq("phone") {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 22px;
+        color: $brown-700;
+        font-weight: $fw-700;
+        font-size: 80px;
+        line-height: 1.1;
+
+        @include mq("phone") {
+            margin-bottom: 15px;
+            font-size: 40px;
+        }
+    }
+
+    &__price {
+        padding: 7px 23px;
+        color: $white;
+        background-color: $red-400;
+        border-radius: 100px;
+    }
+
+    &__text {
+        position: relative;
+        margin-bottom: 48px;
+        padding-left: 74px;
+
+        &::before {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 59px;
+            height: 1px;
+            background-color: $brown-700;
+            content: "";
+        }
+
+        @include mq("phone") {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+
+        @include mq("phone") {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        max-width: 250px;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include mq("phone") {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        @include mq("phone") {
+            max-width: 100%;
+        }
+
+    }
+
+    &__button {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        &--border {
+            color: $red-400;
+            background-color: transparent;
+            border: 1px solid $red-400;
+        }
+    }
+
+    &__video {
+        position: relative;
+        width: 100%;
+        max-width: 674px;
+        height: 592px;
+        background-size: cover;
+        transform: rotate(5.44deg);
+        @include background;
+
+        @include mq("phone") {
+            max-width: 350px;
+            height: 310px;
+        }
+
+        &::before {
+            top: -25px;
+            left: -35px;
+            width: 737px;
+            height: 647px;
+            opacity: 0.1;
+
+            @include mq("phone") {
+                top: -10px;
+                left: -30px;
+                width: 381px;
+                height: 336px;
+            }
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            background-image: url('../img/main/img.png');
+            background-size: cover;
+            content: "";
+            @include background;
+        }
+
+        &::after {
+            top: -62px;
+            left: -90px;
+            width: 831px;
+            height: 733px;
+            opacity: 0.03;
+
+            @include mq("phone") {
+                top: -25px;
+                left: -55px;
+                width: 432px;
+                height: 380px;
+            }
+        }
+    }
+}

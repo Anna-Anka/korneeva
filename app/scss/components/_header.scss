@@ -2,6 +2,10 @@
     padding: 40px 0 16px 0;
     color: $red-400;
 
+    @include mq("tablet") {
+        padding: 34px 0 0;
+    }
+
     &__wrapper,
     &__right {
         display: flex;

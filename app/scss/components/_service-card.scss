@@ -13,8 +13,8 @@
         }
 
         @include mq("phone") {
-            margin-bottom: 30px;
             grid-template-columns: 322px;
+            margin-bottom: 30px;
         }
     }
 
