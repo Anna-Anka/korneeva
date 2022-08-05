@@ -129,6 +129,10 @@ body {
         }
     }
 
+    &__accent {
+        color: $red-400;
+    }
+
     &__number {
         position: relative;
         display: inline-block;

@@ -7,15 +7,9 @@
 
     &__title {
         margin-bottom: 40px;
-        color: $brown-700;
-        font-weight: $fw-700;
-        font-size: 50px;
-        line-height: 1.1;
-        letter-spacing: -0.05em;
 
         @include mq("phone") {
             margin-bottom: 30px;
-            font-size: 28px;
         }
     }
 

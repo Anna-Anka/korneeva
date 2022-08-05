@@ -1,0 +1,70 @@
+.deadline {
+    &__wrapper {
+        position: relative;
+        display: flex;
+
+        @include mq("tablet") {
+            flex-direction: column;
+            padding-bottom: 120px;
+        }
+
+        @include mq("phone") {
+            padding-bottom: 110px;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        max-width: 740px;
+        margin-right: 30px;
+
+        @include mq("tablet") {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        margin-bottom: 50px;
+
+        @include mq("tablet") {
+            margin-bottom: 40px;
+        }
+
+        @include mq("phone") {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        max-width: 470px;
+        padding: 25px;
+
+        @include mq("tablet") {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        @include mq("phone") {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        max-width: 520px;
+
+        @include mq("tablet") {
+            max-width: 100%;
+        }
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+
+}
