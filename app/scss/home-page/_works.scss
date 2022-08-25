@@ -1,3 +1,15 @@
+.studio {
+    padding-bottom: 190px;
+
+    @include mq("tablet") {
+        padding-bottom: 126px;
+    }
+
+    @include mq("phone") {
+        padding-bottom: 60px;
+    }
+}
+
 .works {
     &__box {
         position: relative;

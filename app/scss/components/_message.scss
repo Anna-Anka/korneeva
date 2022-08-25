@@ -19,6 +19,11 @@
         background-repeat: no-repeat;
         background-position: left center;
         background-size: 24px;
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 0.6;
+        }
 
         &::before {
             width: calc(100% - 37px);
@@ -42,6 +47,15 @@
         @include background;
     }
 
+    &--phone,
+    &--address {
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
     &--phone {
         &::before {
             background-image: url('../img/icons/phone.svg');
@@ -59,8 +73,8 @@
     }
 
     &__accent {
-        margin-bottom: 5px;
         display: block;
+        margin-bottom: 5px;
     }
 
     &__link {

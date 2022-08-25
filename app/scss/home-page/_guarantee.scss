@@ -94,5 +94,10 @@
         @include under-line;
         color: $red-400;
         font-size: 16px;
+        transition: opacity 0.6s;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 }

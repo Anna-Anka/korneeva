@@ -13,6 +13,46 @@
         background-color: $red-400;
         border-radius: 30px;
 
+        &::before,
+        &::after {
+            position: absolute;
+            z-index: -12;
+            background-color: rgba($white, 0.1);
+            border-radius: 100%;
+            content: "";
+        }
+
+        &::before {
+            top: -65%;
+            right: 220px;
+            width: 444px;
+            height: 444px;
+
+            @include mq("tablet") {
+                top: -71%;
+                right: -15%;
+            }
+
+            @include mq("phone") {
+                top: 52%;
+                right: 50%;
+                width: 295px;
+                height: 295px;
+                transform: translateX(50%);
+            }
+        }
+
+        &::after {
+            right: -70px;
+            bottom: -48%;
+            width: 395px;
+            height: 395px;
+
+            @include mq("tablet") {
+                display: none;
+            }
+        }
+
         @include mq("phone") {
             padding: 60px 19px 350px;
         }
@@ -53,10 +93,19 @@
     }
 
     &__button {
+        max-width: fit-content;
         padding: 15px 28px;
+        transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+
+        &:hover {
+            color: $white;
+            background-color: $red-400;
+            border-color: $white;
+        }
 
         @include mq("phone") {
             width: 100%;
+            max-width: 100%;
         }
     }
 

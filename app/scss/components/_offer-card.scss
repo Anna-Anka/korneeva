@@ -36,6 +36,12 @@
         .offer-card__button {
             color: $red-400;
             background-color: $white;
+
+            &:hover {
+                color: $white;
+                background-color: $red-400;
+                border-color: $white;
+            }
         }
     }
 

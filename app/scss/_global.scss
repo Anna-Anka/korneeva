@@ -50,17 +50,31 @@ body {
     color: $red-400;
     font-size: 18px;
     background-color: $white;
+    border: 1px solid transparent;
     border-radius: 100px;
+    transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 
     &--border {
         color: $white;
         background-color: transparent;
-        border: 1px solid $white;
+        border-color: $white;
+
+        &:hover {
+            color: $white;
+            background-color: $red-400;
+            border-color: transparent;
+        }
     }
 
     &--accent {
         color: $white;
         background-color: $red-400;
+
+        &:hover {
+            color: $red-400;
+            background-color: $white;
+            border-color: $red-400;
+        }
     }
 }
 
@@ -79,6 +93,11 @@ body {
 
 .logo {
     display: inline-block;
+    transition: opacity 0.4s;
+
+    &:hover {
+        opacity: 0.6;
+    }
 
     &__img {
         width: 100%;
@@ -99,7 +118,7 @@ body {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 120px 0;
 
     @include mq("phone") {
         padding: 60px 0;
@@ -108,6 +127,11 @@ body {
 
 .title {
     margin-bottom: 60px;
+    color: $brown-700;
+    font-weight: $fw-700;
+    font-size: 50px;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
 
     @include mq("tablet") {
         margin-bottom: 40px;
@@ -115,45 +139,11 @@ body {
 
     @include mq("phone") {
         margin-bottom: 30px;
-    }
-
-    &__content {
-        color: $brown-700;
-        font-weight: $fw-700;
-        font-size: 50px;
-        line-height: 1.1;
-        letter-spacing: -0.05em;
-
-        @include mq("phone") {
-            font-size: 28px;
-        }
+        font-size: 28px;
     }
 
     &__accent {
         color: $red-400;
-    }
-
-    &__number {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 5px;
-        padding-left: 75px;
-        color: $red-400;
-        font-weight: $fw-400;
-        font-size: 20px;
-        line-height: 1.6;
-        letter-spacing: 0;
-
-        &::before {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            width: 60px;
-            height: 1px;
-            background-color: $red-400;
-            transform: translateY(-50%);
-            content: "";
-        }
     }
 }
 
@@ -185,6 +175,14 @@ body {
 
     &__text {
         font-size: 14px;
+
+        a {
+            transition: color 0.4s;
+
+            &:hover {
+                color: $red-400;
+            }
+        }
     }
 }
 

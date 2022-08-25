@@ -110,6 +110,15 @@
         }
     }
 
+    &__button {
+        transition: opacity 0.6s;
+
+        &:hover {
+            border-color: $white;
+            opacity: 0.6;
+        }
+    }
+
     &__img {
         @include background;
         width: 100%;

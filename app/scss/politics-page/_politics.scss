@@ -37,6 +37,13 @@
         }
     }
 
+    a {
+        transition: color 0.4s;
+        &:hover {
+            color: $red-400;
+        }
+    }
+
     &__agreement {
         h3 {
             font-weight: $fw-400;

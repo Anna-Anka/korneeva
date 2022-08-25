@@ -55,6 +55,13 @@
     &__button {
         width: 100%;
         max-width: 300px;
+        transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+
+        &:hover {
+            color: $white;
+            background-color: transparent;
+            border-color: $white;
+        }
 
         @include mq("phone") {
             max-width: 100%;

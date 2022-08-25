@@ -123,5 +123,10 @@
         color: $white;
         font-size: 14px;
         text-decoration: underline;
+        transition: color 0.4s;
+
+        &:hover {
+            color: $red-400;
+        }
     }
 }

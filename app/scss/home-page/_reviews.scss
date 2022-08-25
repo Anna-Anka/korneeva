@@ -4,7 +4,6 @@
     &__box {
         position: relative;
         display: flex;
-        align-items: center;
         justify-content: space-between;
 
         @include mq("tablet") {
@@ -20,11 +19,13 @@
     &__info {
         width: 100%;
         max-width: 375px;
+        padding-top: 40px;
 
         @include mq("tablet") {
             max-width: 100%;
             max-width: 700px;
             margin-bottom: 30px;
+            padding-top: 0;
         }
     }
 
@@ -41,8 +42,6 @@
         margin-bottom: 140px;
         padding-right: 51px;
         padding-left: 51px;
-        color: $white;
-        background-color: $red-400;
 
         @include mq("tablet") {
             margin-bottom: 0;
@@ -67,6 +66,11 @@
         padding-right: 46px;
         color: $red-400;
         font-size: 18px;
+        transition: opacity 0.4s;
+
+        &:hover {
+            opacity: 0.6;
+        }
 
         @include mq("tablet") {
             position: absolute;
@@ -126,16 +130,26 @@
         }
     }
 
-    &__stars {
-        margin-bottom: 15px;
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        
+        @include mq("phone") {
+           justify-content: space-between;
+        }
     }
 
-    &__subtitle {
-        margin-bottom: 10px;
-        font-weight: $fw-700;
-        font-size: 28px;
-        line-height: 1.1;
-        letter-spacing: -0.05em;
+    &__img {
+        width: 100%;
+        max-width: 129px;
+        height: 44px;
+        margin-right: 44px;
+        object-fit: contain;
+
+        @include mq("phone") {
+            margin-right: 8px;
+        }
     }
 
     &__text,
@@ -171,7 +185,7 @@
 
         @include mq("tablet") {
             position: absolute;
-            top: 35px;
+            top: 0;
             right: 0;
         }
 
