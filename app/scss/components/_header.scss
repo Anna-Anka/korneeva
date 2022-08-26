@@ -42,15 +42,15 @@
 
         @include mq("tablet") {
             flex-direction: column;
-            margin-right: 67px;
             align-items: flex-start;
+            margin-right: 67px;
         }
 
         @include mq("phone") {
-            font-size: 0;
             flex-direction: row;
-            margin-right: 0;
             order: 1;
+            margin-right: 0;
+            font-size: 0;
         }
 
         .message__item {
@@ -69,9 +69,9 @@
 
         .message__link {
             @include mq("phone") {
+                display: inline-block;
                 width: 24px;
                 height: 24px;
-                display: inline-block;
             }
 
             &::before {

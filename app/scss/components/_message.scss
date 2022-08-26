@@ -47,7 +47,6 @@
         @include background;
     }
 
-    &--phone,
     &--address {
         transition: opacity 0.4s;
 
@@ -81,6 +80,11 @@
         margin-bottom: 3px;
         font-size: 20px;
         line-height: 1.1;
+        transition: opacity 0.3s;
+
+        &:hover {
+            opacity: 0.6;
+        }
     }
 
     &__subtext {

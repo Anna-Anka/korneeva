@@ -5,7 +5,6 @@
     border-radius: 15px;
     transition: background-color 0.4s;
 
-
     &:hover {
         background-color: $red-400;
 
@@ -26,76 +25,40 @@
             background-color: rgba($white, 0.15);
         }
 
-        &::after {
+        .service-card__img {
             filter: invert(100%) sepia(0%) saturate(7427%) hue-rotate(34deg) brightness(120%) contrast(105%);
         }
     }
 
     &__button {
         position: absolute;
-        width: 100%;
-        height: 100%;
         top: 0;
         right: 0;
         z-index: 2;
         display: inline-block;
+        width: 100%;
+        height: 100%;
     }
+
+    &__content {
+        display: flex;
+        padding: 30px 30px 40px;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 60px;
+        height: 60px;
+        margin-right: 20px;
+        object-fit: contain;
+    }
+
     &__box {
         display: block;
-        padding: 30px 30px 40px 110px;
-    }
-
-    &--manicure {
-        &::after {
-            background-image: url('../img/services/manicure.svg');
-        }
-    }
-
-    &--pedicure {
-        &::after {
-            background-image: url('../img/services/pedicure.svg');
-        }
-    }
-
-    &--building {
-        &::after {
-            background-image: url('../img/services/building.svg');
-        }
-    }
-
-    &--design {
-        &::after {
-            background-image: url('../img/services/design.svg');
-        }
-    }
-
-    &--podology {
-        &::after {
-            background-image: url('../img/services/podology.svg');
-        }
-    }
-
-    &--learn {
-        &::after {
-            background-image: url('../img/services/learn.svg');
-        }
-    }
-
-    &::before,
-    &::after {
-        position: absolute;
-        content: "";
-    }
-
-    &::after {
-        top: 30px;
-        left: 30px;
-        width: 60px;
-        height: 60px;
-        @include background;
     }
 
     &::before {
+        position: absolute;
         top: -70px;
         left: -65px;
         width: 212px;
@@ -104,6 +67,7 @@
         background-repeat: no-repeat;
         border-radius: 100%;
         transition: background-color 0.4s;
+        content: "";
     }
 
     &__title {

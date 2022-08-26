@@ -50,13 +50,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.works')) {
         const sliderWorks = document.querySelector('.works__swiper');
         const swiperWorks = new Swiper(sliderWorks, {
-            slidesPerView: 1,
-            slidesPerGroup: 1,
-            spaceBetween: 0,
 
             navigation: {
                 nextEl: '.works__button--next',
                 prevEl: '.works__button--prev',
+            },
+
+            breakpoints: {
+                1320: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4,
+                    spaceBetween: 30,
+                },
+
+                1000: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 3,
+                    spaceBetween: 20,
+                },
+
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                },
             },
         });
     }
