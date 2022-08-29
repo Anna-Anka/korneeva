@@ -23,16 +23,20 @@
         padding-right: 62px;
     }
 
-    &__img {
-        width: 100%;
-        max-width: 320px;
+    &__item {
         height: 370px;
-        object-fit: cover;
-        border-radius: 15px;
 
         @include mq("tablet") {
             height: 340px;
         }
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 320px;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
     }
 
     &__buttons {

@@ -162,45 +162,6 @@
             max-width: 350px;
             height: 310px;
         }
-
-        &::before {
-            top: -25px;
-            left: -35px;
-            width: 737px;
-            height: 647px;
-            opacity: 0.1;
-
-            @include mq("phone") {
-                top: -10px;
-                left: -30px;
-                width: 381px;
-                height: 336px;
-            }
-        }
-
-        &::before,
-        &::after {
-            position: absolute;
-            background-image: url('../img/main/img.png');
-            background-size: cover;
-            content: "";
-            @include background;
-        }
-
-        &::after {
-            top: -62px;
-            left: -90px;
-            width: 831px;
-            height: 733px;
-            opacity: 0.03;
-
-            @include mq("phone") {
-                top: -25px;
-                left: -55px;
-                width: 432px;
-                height: 380px;
-            }
-        }
     }
 
     &__play {
@@ -215,6 +176,7 @@
         background-size: 30px;
         border-radius: 100%;
         box-shadow: 0 0 0 0 rgba($white, 0.3);
+        transform: rotate(-5.44deg);
         animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
 
         &:hover {

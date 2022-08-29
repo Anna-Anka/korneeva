@@ -1,7 +1,6 @@
 .advice-card {
-    position: relative;
     height: 100%;
-    padding: 133px 16px 40px;
+    padding: 44px 17px 40px;
     color: $brown-700;
     text-align: center;
     border-radius: 15px;
@@ -17,45 +16,11 @@
         background-color: $red-400;
     }
 
-    &::before {
-        position: absolute;
-        top: 44px;
-        left: 50%;
-        width: 64px;
+    &__img {
+        width: 100%;
+        max-width: 64px;
         height: 64px;
-        transform: translateX(-50%);
-        content: "";
-        @include background;
-    }
-
-    &--gloves {
-        &::before {
-            background-image: url('../img/advices/gloves.svg');
-        }
-    }
-
-    &--deadline {
-        &::before {
-            background-image: url('../img/advices/deadline.svg');
-        }
-    }
-
-    &--care {
-        &::before {
-            background-image: url('../img/advices/care.svg');
-        }
-    }
-
-    &--saw {
-        &::before {
-            background-image: url('../img/advices/saw.svg');
-        }
-    }
-
-    &--temperature {
-        &::before {
-            background-image: url('../img/advices/temperature.svg');
-        }
+        margin-bottom: 25px;
     }
 
     &__title {
