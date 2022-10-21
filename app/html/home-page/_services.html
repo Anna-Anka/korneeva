@@ -1,13 +1,24 @@
 <section class="services">
     <div class="container">
-        <h2 class="title">
-            Наши услуги
-        </h2>
+        <div class="title">
+            <span class="title__number">01</span>
+            <h2 class="title__content">
+                Наши услуги
+            </h2>
+        </div>
         <ul class="services__items">
             <li class="services__item">
                 @include('../components/_service-card.html', {
-                'img' : 'manicure',
-                'alt' : 'Маникюр',
+                'icon' : 'manicure',
+                'title' : 'Маникюр',
+                'item-1' : 'Классический',
+                'item-2' : 'Классический',
+                'price' : '3000',
+                })
+            </li>
+            <li class="services__item">
+                @include('../components/_service-card.html', {
+                'icon' : 'pedicure',
                 'title' : 'Педикюр',
                 'item-1' : 'Классический',
                 'item-2' : 'Классический',
@@ -16,18 +27,7 @@
             </li>
             <li class="services__item">
                 @include('../components/_service-card.html', {
-                'img' : 'pedicure',
-                'alt' : 'Педикюр',
-                'title' : 'Педикюр',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
-                'price' : '3000',
-                })
-            </li>
-            <li class="services__item">
-                @include('../components/_service-card.html', {
-                'img' : 'building',
-                'alt' : 'Наращивание',
+                'icon' : 'building',
                 'title' : 'Наращивание',
                 'item-1' : 'Классический',
                 'item-2' : 'Классический',
@@ -36,8 +36,7 @@
             </li>
             <li class="services__item">
                 @include('../components/_service-card.html', {
-                'img' : 'design',
-                'alt' : 'Дизайн',
+                'icon' : 'design',
                 'title' : 'Дизайн',
                 'item-1' : 'Классический',
                 'item-2' : 'Классический',
@@ -46,8 +45,7 @@
             </li>
             <li class="services__item">
                 @include('../components/_service-card.html', {
-                'img' : 'podology',
-                'alt' : 'Подология',
+                'icon' : 'podology',
                 'title' : 'Подология',
                 'item-1' : 'Классический',
                 'item-2' : 'Классический',
@@ -56,8 +54,7 @@
             </li>
             <li class="services__item">
                 @include('../components/_service-card.html', {
-                'img' : 'learn',
-                'alt' : 'Обучение',
+                'icon' : 'learn',
                 'title' : 'Обучение',
                 'item-1' : 'Классический',
                 'item-2' : 'Классический',

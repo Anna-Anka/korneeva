@@ -1,97 +1,96 @@
 .advices {
-    padding-bottom: 100px;
+	padding-bottom: 100px;
 
-    @include mq("phone") {
-        padding-bottom: 60px;
-    }
+	@include mq('phone') {
+		padding-bottom: 60px;
+	}
 
-    &__title {
-        @include mq("tablet") {
-            margin-bottom: 67px;
-        }
+	&__title {
+		@include mq('tablet') {
+			margin-bottom: 67px;
+		}
 
-        @include mq("phone") {
-            margin-bottom: 30px;
-        }
-    }
+		@include mq('phone') {
+			margin-bottom: 30px;
+		}
+	}
 
-    &__wrapper {
-        position: relative;
-    }
+	&__wrapper {
+		position: relative;
+	}
 
-    &__items {
-        display: flex;
-        flex-wrap: wrap;
-        margin-right: -30px;
-        margin-bottom: 30px;
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: -30px;
+		margin-bottom: 30px;
 
-        @include mq("tablet") {
-            margin-right: -20px;
-            margin-bottom: -20px;
-        }
+		@include mq('tablet') {
+			margin-right: -20px;
+			margin-bottom: -20px;
+		}
 
-        @include mq("phone") {
-            margin: 0 -20px 10px;
-        }
-    }
+		@include mq('phone') {
+			margin: 0 -20px 10px;
+		}
+	}
 
-    &__item {
-        width: 100%;
-        max-width: 410px;
-        margin: 0 30px 30px 0;
-        border-radius: 15px;
-        box-shadow: 0 15px 60px rgba($dark-800, 0.13);
+	&__item {
+		width: 100%;
+		max-width: 410px;
+		margin: 0 30px 30px 0;
+		border-radius: 15px;
+		box-shadow: 0 15px 60px rgba($dark-800, 0.13);
 
-        @include mq("tablet") {
-            max-width: 460px;
-            min-height: 387px;
-            margin: 0 20px 20px 0;
-        }
+		@include mq('tablet') {
+			max-width: 460px;
+			min-height: 387px;
+			margin: 0 20px 20px 0;
+		}
 
-        @include mq("phone") {
-            width: 113%;
-            margin-right: 0;
-        }
+		@include mq('phone') {
+			width: 113%;
+			margin-right: 0;
+		}
 
-        &--big {
-            max-width: 630px;
+		&--big {
+			max-width: 630px;
 
-            @include mq("tablet") {
-                max-width: 460px;
-            }
+			@include mq('tablet') {
+				max-width: 460px;
+			}
 
-            .advice-card {
-                padding: 62px 28px 60px;
+			.advice-card {
+				padding: 151px 28px 60px;
 
-                @include mq("tablet") {
-                    padding: 44px 24px 40px;
-                }
+				@include mq('tablet') {
+					padding: 133px 24px 40px;
+				}
+			}
+		}
+	}
 
-            }
-        }
-    }
+	&__text {
+		opacity: 0.3;
 
-    &__text {
-        opacity: 0.3;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
 
-        p {
-            &:not(:last-child) {
-                margin-bottom: 15px;
-            }
-        }
+		@include mq('tablet') {
+			position: absolute;
+			right: 0;
+			bottom: 50px;
+			max-width: 460px;
+		}
 
-        @include mq("tablet") {
-            position: absolute;
-            right: 0;
-            bottom: 50px;
-            max-width: 460px;
-        }
-
-        @include mq("phone") {
-            position: relative;
-            right: unset;
-            bottom: unset;
-            max-width: 100%;
-        }
-    }
+		@include mq('phone') {
+			position: relative;
+			right: unset;
+			bottom: unset;
+			max-width: 100%;
+		}
+	}
 }

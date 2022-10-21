@@ -1,33 +1,68 @@
 .advice-card {
-    height: 100%;
-    padding: 44px 17px 40px;
-    color: $brown-700;
-    text-align: center;
-    border-radius: 15px;
-    transition: background-color 0.4s, color 0.4s;
+	position: relative;
+	height: 100%;
+	padding: 133px 16px 40px;
+	color: $brown-700;
+	text-align: center;
+	border-radius: 15px;
+	transition: background-color 0.4s, color 0.4s;
 
-    @include mq("tablet") {
-        padding-right: 24px;
-        padding-left: 24px;
-    }
+	@include mq('tablet') {
+		padding-right: 24px;
+		padding-left: 24px;
+	}
 
-    &:hover {
-        color: $white;
-        background-color: $red-400;
-    }
+	&:hover {
+		color: $white;
+		background-color: $red-400;
+	}
 
-    &__img {
-        width: 100%;
-        max-width: 64px;
-        height: 64px;
-        margin-bottom: 25px;
-    }
+	&::before {
+		position: absolute;
+		top: 44px;
+		left: 50%;
+		width: 64px;
+		height: 64px;
+		transform: translateX(-50%);
+		content: '';
+		@include background;
+	}
 
-    &__title {
-        margin-bottom: 20px;
-        font-weight: $fw-700;
-        font-size: 28px;
-        line-height: 1.1;
-        letter-spacing: -0.05em;
-    }
+	&--gloves {
+		&::before {
+			background-image: url('../img/advices/gloves.svg');
+		}
+	}
+
+	&--deadline {
+		&::before {
+			background-image: url('../img/advices/deadline.svg');
+		}
+	}
+
+	&--care {
+		&::before {
+			background-image: url('../img/advices/care.svg');
+		}
+	}
+
+	&--saw {
+		&::before {
+			background-image: url('../img/advices/saw.svg');
+		}
+	}
+
+	&--temperature {
+		&::before {
+			background-image: url('../img/advices/temperature.svg');
+		}
+	}
+
+	&__title {
+		margin-bottom: 20px;
+		font-weight: $fw-700;
+		font-size: 28px;
+		line-height: 1.1;
+		letter-spacing: -0.05em;
+	}
 }
