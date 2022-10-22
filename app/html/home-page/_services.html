@@ -8,61 +8,56 @@
         </div>
         <ul class="services__items">
             <li class="services__item">
-                @include('../components/_service-card.html', {
+                @include('../components/cards/_service-card.html', {
                 'icon' : 'manicure',
                 'title' : 'Маникюр',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
+                'list' : '<li class="service-card__item">Классический</li><li class="service-card__item">Комбинированный</li>',
                 'price' : '3000',
                 })
             </li>
             <li class="services__item">
-                @include('../components/_service-card.html', {
+                @include('../components/cards/_service-card.html', {
                 'icon' : 'pedicure',
                 'title' : 'Педикюр',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
+                'list' : '<li class="service-card__item">Аппаратный</li><li class="service-card__item">Японский</li>',
+                'price' : '3000',
                 'price' : '3000',
                 })
             </li>
             <li class="services__item">
-                @include('../components/_service-card.html', {
+                @include('../components/cards/_service-card.html', {
                 'icon' : 'building',
                 'title' : 'Наращивание',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
+                'list' : '<li class="service-card__item">Гелевое наращивание</li><li class="service-card__item">Коррекция</li><li class="service-card__item">Снятие</li>',
                 'price' : '3000',
                 })
             </li>
             <li class="services__item">
-                @include('../components/_service-card.html', {
+                @include('../components/cards/_service-card.html', {
                 'icon' : 'design',
                 'title' : 'Дизайн',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
+                'list' : '<li class="service-card__item">Френч, стразы</li><li class="service-card__item">Топ с блестками</li>',
                 'price' : '3000',
                 })
             </li>
             <li class="services__item">
-                @include('../components/_service-card.html', {
+                @include('../components/cards/_service-card.html', {
                 'icon' : 'podology',
                 'title' : 'Подология',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
+                'list' : '<li class="service-card__item">Коррекция</li><li class="service-card__item">Тампонирование</li><li class="service-card__item">Выпиливание онихолизиса</li>',
                 'price' : '3000',
                 })
             </li>
             <li class="services__item">
-                @include('../components/_service-card.html', {
+                @include('../components/cards/_service-card.html', {
                 'icon' : 'learn',
                 'title' : 'Обучение',
-                'item-1' : 'Классический',
-                'item-2' : 'Классический',
+                'list' : '<li class="service-card__item">Аппаратный маникюр</li><li class="service-card__item">Аппаратный педикюр</li><li class="service-card__item">Протезирование ногтей</li>',
                 'price' : '3000',
                 })
             </li>
         </ul>
-        <a class="services__link button button--accent" href="#">
+        <a class="services__link button button--accent" href="./price.html">
             Прайс-лист
         </a>
     </div>

@@ -1,0 +1,46 @@
+.form {
+	&__item {
+		width: 100%;
+	}
+
+	&__field {
+		width: 100%;
+		padding: 27px 30px;
+		font-size: 16px;
+		background-color: $white;
+		border: 1px solid rgba($black, 0.15);
+		border-radius: 100px;
+
+		&::placeholder {
+			color: rgba($black, 0.3);
+			transition: color 0.4s;
+		}
+
+		&:hover {
+			&::placeholder {
+				color: $black;
+			}
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+	}
+
+	&__link {
+		transition: color 0.4s, box-shadow 0.4s;
+		border-radius: 6px;
+
+		&:focus {
+			box-shadow: 0 0 0 2px $white;
+		}
+
+		&:hover {
+			color: $white;
+		}
+
+		&:active {
+			color: $brown-700;
+		}
+	}
+}

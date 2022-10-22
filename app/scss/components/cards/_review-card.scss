@@ -1,0 +1,57 @@
+.review-card {
+    padding: 30px;
+
+    @include mq("phone") {
+        padding: 20px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        
+        @include mq("phone") {
+           justify-content: space-between;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 129px;
+        height: 44px;
+        margin-right: 44px;
+        object-fit: contain;
+
+        @include mq("phone") {
+            margin-right: 8px;
+        }
+    }
+
+    &__text,
+    &__data {
+        color: $brown-700;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__name {
+        display: block;
+        margin-bottom: 15px;
+        font-weight: $fw-700;
+        font-size: 18px;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+    }
+
+    &__data {
+        font-size: 14px;
+    }
+}

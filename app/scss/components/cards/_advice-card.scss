@@ -12,11 +12,6 @@
 		padding-left: 24px;
 	}
 
-	&:hover {
-		color: $white;
-		background-color: $red-400;
-	}
-
 	&::before {
 		position: absolute;
 		top: 44px;

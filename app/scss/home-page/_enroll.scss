@@ -55,7 +55,11 @@
     &__button {
         width: 100%;
         max-width: 300px;
-        transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+        transition: color 0.4s, background-color 0.4s, border-color 0.4s, box-shadow 0.4s;
+
+        &:focus {
+            box-shadow: 0 0 0 2px $brown-700;
+        }
 
         &:hover {
             color: $white;

@@ -1,0 +1,126 @@
+.service-card {
+	position: relative;
+    height: 100%;
+	padding: 30px 30px 40px 110px;
+	overflow: hidden;
+	background-color: transparent;
+	border-radius: 15px;
+	transition: background-color 0.4s;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	&--manicure {
+		&::after {
+			background-image: url('../img/services/manicure.svg');
+		}
+	}
+
+	&--pedicure {
+		&::after {
+			background-image: url('../img/services/pedicure.svg');
+		}
+	}
+
+	&--building {
+		&::after {
+			background-image: url('../img/services/building.svg');
+		}
+	}
+
+	&--design {
+		&::after {
+			background-image: url('../img/services/design.svg');
+		}
+	}
+
+	&--podology {
+		&::after {
+			background-image: url('../img/services/podology.svg');
+		}
+	}
+
+	&--learn {
+		&::after {
+			background-image: url('../img/services/learn.svg');
+		}
+	}
+
+	&::before,
+	&::after {
+		position: absolute;
+		content: '';
+	}
+
+	&::after {
+		top: 30px;
+		left: 30px;
+		width: 60px;
+		height: 60px;
+		@include background;
+	}
+
+	&::before {
+		top: -70px;
+		left: -65px;
+		width: 212px;
+		height: 212px;
+		background-color: rgba($red-400, 0.05);
+		background-repeat: no-repeat;
+		border-radius: 100%;
+		transition: background-color 0.4s;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		color: $brown-700;
+		font-weight: $fw-700;
+		font-size: 28px;
+		line-height: 1.1;
+		letter-spacing: -0.05em;
+	}
+
+	&__items {
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		position: relative;
+		padding-left: 33px;
+		color: rgba($brown-700, 0.5);
+
+		&::before {
+			position: absolute;
+			top: 16px;
+			left: 0;
+			width: 28px;
+			height: 1px;
+			background-color: rgba($brown-700, 0.5);
+			transition: background-color 0.4s;
+			content: '';
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+
+	&__price {
+		display: block;
+		margin-top: auto;
+		color: $red-400;
+		font-weight: $fw-700;
+		font-size: 16px;
+		line-height: 1.1;
+		text-transform: uppercase;
+	}
+
+	&__title,
+	&__item,
+	&__price {
+		transition: color 0.4s;
+	}
+}

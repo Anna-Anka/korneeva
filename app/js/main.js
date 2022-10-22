@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
         $('.form__field--phone').inputmask();
     }
 
-    if (document.querySelector('.reviews')) {
-        $(".reviews__stars").rateYo({
+    if (document.querySelector('.review-card')) {
+        $(".review-card__stars").rateYo({
             starWidth: "22px",
             ratedFill: "#FECC02",
             readOnly: true,
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: 0,
+            autoHeight: true,
 
             navigation: {
                 nextEl: '.reviews__button--next',

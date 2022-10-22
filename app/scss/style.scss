@@ -9,15 +9,15 @@
 @import 'components/message';
 @import 'components/header';
 @import 'components/gallery';
-
-@import 'components/offer-card';
-@import 'components/service-card';
-@import 'components/advice-card';
-
 @import 'components/modal';
-
+@import 'components/form';
 @import 'components/footer';
 
+// Cards
+@import 'components/cards/offer-card';
+@import 'components/cards/service-card';
+@import 'components/cards/advice-card';
+@import 'components/cards/review-card';
 
 //Home
 @import 'home-page/main';
@@ -41,6 +41,3 @@
 
 //politics-page
 @import 'politics-page/politics';
-
-
-//TODO некоторым кнопкам добавить новый класс

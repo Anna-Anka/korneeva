@@ -80,7 +80,6 @@
             content: "";
         }
 
-
         &--without {
             padding-top: 0;
 
@@ -96,7 +95,6 @@
                 }
             }
         }
-
 
         &:first-child {
             @include mq("tablet") {

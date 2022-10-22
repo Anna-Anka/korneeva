@@ -1,105 +1,140 @@
 //Адаптив
-$breakpoints: ("phone": 1000px,
-    "tablet": 1320px);
+$breakpoints: (
+	'phone': 1000px,
+	'tablet': 1320px,
+);
 
 @mixin mq($width, $type: max) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
 
-        @if $type==max {
-            $width: $width - 1px;
-        }
+		@if $type==max {
+			$width: $width - 1px;
+		}
 
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
-    }
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
 }
 
 //////////////////////////////////////////////////////////////
 
 //Затемнение
 @mixin blackout {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: $black;
-    transition: opacity 0.3s;
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: $black;
+	transition: opacity 0.3s;
 }
 
 //////////////////////////////////////////////////////////////
 
 //Background
 @mixin background {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 @mixin under-line {
-    position: relative;
-    padding-bottom: 6px;
+	position: relative;
+	padding-bottom: 6px;
 
-    &::before {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 1px;
-        border: 1px dashed $red-400;
-        content: "";
-    }
+	&::before {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		border: 1px dashed $red-400;
+		content: '';
+	}
 }
 
 @mixin slider-arrow {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    margin-top: 0;
-    color: transparent;
-    background-color: $red-400;
-    border-radius: 50%;
-    border: 1px solid transparent;
-    transition: background-color 0.4s, border-color 0.4s;
+	position: relative;
+	width: 60px;
+	height: 60px;
+	margin-top: 0;
+	color: transparent;
+	background-color: $red-400;
+	border-radius: 50%;
+	border: 1px solid transparent;
+	transition: background-color 0.4s, border-color 0.4s, opacity 0.4s, box-shadow 0.4s;
 
-    &:hover {
-        background-color: $white;
-        border-color: $red-400;
+	&:focus {
+		background-color: rgba($red-400, 0.1);
+        box-shadow: 0 0 0 2px $red-400;
 
-        &::after {
-            filter: invert(63%) sepia(28%) saturate(3370%) hue-rotate(318deg) brightness(90%) contrast(91%);
-        }
-    }
+		&::after {
+			filter: invert(95%) sepia(39%) saturate(5482%) hue-rotate(341deg)
+				brightness(93%) contrast(91%);
+		}
+	}
 
-    &::after {
-        font-size: 0;
-        @include background;
-        width: 35px;
-        height: 15px;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        content: "";
-        position: absolute;
-        background-image: url('../img/sprite/arrow.svg');
-    }
+	&:hover {
+		background-color: $white;
+		border-color: $red-400;
 
-    &--prev {
-        margin-right: 40px;
+		&::after {
+			filter: invert(63%) sepia(28%) saturate(3370%) hue-rotate(318deg)
+				brightness(90%) contrast(91%);
+		}
+	}
 
-        &::after {
-            transform: translate(-50%, -50%) rotate(180deg);
-        }
-    }
+	&:active {
+		opacity: 0.6;
+	}
+
+	&::after {
+		font-size: 0;
+		@include background;
+		width: 35px;
+		height: 15px;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		left: 50%;
+		content: '';
+		position: absolute;
+		background-image: url('../img/sprite/arrow.svg');
+	}
+
+	&--prev {
+		margin-right: 40px;
+
+		&::after {
+			transform: translate(-50%, -50%) rotate(180deg);
+		}
+	}
 }
 
 @mixin slider-disabled {
-    opacity: 1;
-    background-color: rgba($red-400, 0.1);
+	opacity: 1;
+	background-color: rgba($red-400, 0.1);
 
-    &::after {
-        filter: invert(95%) sepia(39%) saturate(5482%) hue-rotate(341deg) brightness(93%) contrast(91%);
-    }
+	&::after {
+		filter: invert(95%) sepia(39%) saturate(5482%) hue-rotate(341deg)
+			brightness(93%) contrast(91%);
+	}
+}
+
+@mixin state {
+	transition: opacity 0.4s, box-shadow 0.4s, border-radius 0.4s;
+
+	&:focus {
+		border-radius: 8px;
+		box-shadow: 0 0 0 2px $red-400;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
 }

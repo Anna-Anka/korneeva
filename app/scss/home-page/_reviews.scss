@@ -1,207 +1,144 @@
 .reviews {
-    padding-top: 0;
+	padding-top: 0;
 
-    &__box {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
+	&__box {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
 
-        @include mq("tablet") {
-            flex-direction: column;
-            align-items: flex-start;
-        }
+		@include mq('tablet') {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 
-        @include mq("phone") {
-            padding-bottom: 90px;
-        }
-    }
+		@include mq('phone') {
+			padding-bottom: 90px;
+		}
+	}
 
-    &__info {
-        width: 100%;
-        max-width: 375px;
-        padding-top: 40px;
+	&__info {
+		width: 100%;
+		max-width: 375px;
+		padding-top: 40px;
 
-        @include mq("tablet") {
-            max-width: 100%;
-            max-width: 700px;
-            margin-bottom: 30px;
-            padding-top: 0;
-        }
-    }
+		@include mq('tablet') {
+			max-width: 100%;
+			max-width: 700px;
+			margin-bottom: 30px;
+			padding-top: 0;
+		}
+	}
 
-    &__title {
-        margin-bottom: 30px;
+	&__title {
+		margin-bottom: 30px;
 
-        @include mq("tablet") {
-            max-width: 100%;
-        }
-    }
+		@include mq('tablet') {
+			max-width: 100%;
+		}
+	}
 
-    &__link {
-        width: fit-content;
-        margin-bottom: 140px;
-        padding-right: 51px;
-        padding-left: 51px;
+	&__link {
+		width: fit-content;
+		margin-bottom: 140px;
+		padding-right: 51px;
+		padding-left: 51px;
 
-        @include mq("tablet") {
-            margin-bottom: 0;
-        }
-    }
+		@include mq('tablet') {
+			margin-bottom: 0;
+		}
+	}
 
-    &__right {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+	&__right {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 
-        @include mq("phone") {
-            align-items: center;
-        }
-    }
+		@include mq('phone') {
+			align-items: center;
+		}
+	}
 
-    &__all {
-        position: relative;
-        display: inline-block;
-        margin-bottom: 20px;
-        padding-right: 46px;
-        color: $red-400;
-        font-size: 18px;
-        transition: opacity 0.4s;
-
-        &:hover {
-            opacity: 0.6;
-        }
-
-        @include mq("tablet") {
-            position: absolute;
-            top: -70px;
-            right: 0;
-        }
-
-        @include mq("phone") {
-            position: relative;
-            top: unset;
-            right: unset;
-        }
-
-        &::before {
-            position: absolute;
-            top: 7px;
-            right: 0;
-            width: 36px;
-            height: 15px;
-            background-image: url('../img/sprite/arrow.svg');
-            filter: invert(67%) sepia(42%) saturate(2578%) hue-rotate(321deg) brightness(93%) contrast(86%);
-            content: "";
-            @include background;
-        }
-    }
-
-    &__swiper {
-        margin: 0;
-        border-radius: 15px;
-        box-shadow: 0 15px 60px rgba($dark-800, 0.13);
-    }
-
-    &__items {
-        max-width: 850px;
-
-        @include mq("tablet") {
-            max-width: 940px;
-        }
-
-        @include mq("phone") {
-            max-width: 322px;
-        }
-    }
-
-    &__item {
-        width: 100%;
-        max-width: 790px;
-        padding: 30px;
-
-        @include mq("tablet") {
-            max-width: 890px;
-        }
-
-        @include mq("phone") {
-            max-width: 280px;
-            padding: 20px;
-        }
-    }
-
-    &__top {
-        display: flex;
-        align-items: center;
-        margin-bottom: 20px;
+	&__all {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 20px;
+		padding-right: 46px;
+		color: $red-400;
+		font-size: 18px;
+		@include state;
         
-        @include mq("phone") {
-           justify-content: space-between;
-        }
-    }
+		@include mq('tablet') {
+			position: absolute;
+			top: -70px;
+			right: 0;
+		}
 
-    &__img {
-        width: 100%;
-        max-width: 129px;
-        height: 44px;
-        margin-right: 44px;
-        object-fit: contain;
+		@include mq('phone') {
+			position: relative;
+			top: unset;
+			right: unset;
+		}
 
-        @include mq("phone") {
-            margin-right: 8px;
-        }
-    }
+		&::before {
+			position: absolute;
+			top: 7px;
+			right: 0;
+			width: 36px;
+			height: 15px;
+			background-image: url('../img/sprite/arrow.svg');
+			filter: invert(67%) sepia(42%) saturate(2578%) hue-rotate(321deg)
+				brightness(93%) contrast(86%);
+			content: '';
+			@include background;
+		}
+	}
 
-    &__text,
-    &__data {
-        color: rgba($brown-700, 0.5);
-    }
+	&__swiper {
+		margin: 0;
+		border-radius: 15px;
+		box-shadow: 0 15px 60px rgba($dark-800, 0.13);
+	}
 
-    &__text {
-        margin-bottom: 30px;
+	&__items {
+		max-width: 850px;
 
-        p {
-            &:not(:last-child) {
-                margin-bottom: 10px;
-            }
-        }
-    }
+		@include mq('tablet') {
+			max-width: 940px;
+		}
 
-    &__name {
-        display: block;
-        margin-bottom: 15px;
-        font-weight: $fw-700;
-        font-size: 18px;
-        line-height: 1.1;
-        letter-spacing: -0.05em;
-    }
+		@include mq('phone') {
+			max-width: 322px;
+		}
+	}
 
-    &__data {
-        font-size: 14px;
-    }
+	&__item {
+		box-sizing: border-box;
+		width: 100%;
+	}
 
-    &__buttons {
-        display: flex;
+	&__buttons {
+		display: flex;
 
-        @include mq("tablet") {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
+		@include mq('tablet') {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
 
-        @include mq("phone") {
-            top: unset;
-            right: 50%;
-            bottom: 0;
-            transform: translateX(50%);
-        }
-    }
+		@include mq('phone') {
+			top: unset;
+			right: 50%;
+			bottom: 0;
+			transform: translateX(50%);
+		}
+	}
 
-    &__button {
-        @include slider-arrow;
-    }
+	&__button {
+		@include slider-arrow;
+	}
 
-    .swiper-button-disabled {
-        @include slider-disabled
-    }
+	.swiper-button-disabled {
+		@include slider-disabled;
+	}
 }
