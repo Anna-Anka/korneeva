@@ -2,6 +2,26 @@
 
 <a href="https://anna-anka.github.io/korneeva/" target="_blank">Посмотреть работу</a>
 
+<p></p>
+
+<b>Список страниц: </b>
+<ul>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/korneeva/">Главная</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/korneeva/guarantee.html">Гарантия</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/korneeva/price.html">Цены</a>
+  </li>
+  <li>
+    <a target="_blank" href="https://anna-anka.github.io/korneeva/politics.html">Политика конфиденциальности</a>
+  </li>
+</ul>
+
+<p></p>
+
 <b>Используемые технологии: </b>
 1) Сборщик gulp
 2) Html + плагин gulp-file-include
