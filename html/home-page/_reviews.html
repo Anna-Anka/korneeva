@@ -5,7 +5,7 @@
                 <h2 class="reviews__title title">
                     Отзывы о нашей работе
                 </h2>
-                <a class="reviews__link button button--accent" href="https://yandex.ru/search/?from=chromesearch&clid=2224314&text=%D1%81%D1%82%D1%83%D0%B4%D0%B8%D1%8F+%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D1%8B+%D0%BA%D0%BE%D1%80%D0%BD%D0%B5%D0%B5%D0%B2%D0%BE%D0%B9&lr=76&redircnt=1659782611.1" target="_blank">
+                <a class="reviews__link button button--accent" href="#">
                     Оставить отзыв
                 </a>
                 <div class="reviews__buttons">
@@ -22,44 +22,31 @@
                 <div class="reviews__swiper swiper">
                     <ul class="reviews__items swiper-wrapper">
                         <li class="reviews__item swiper-slide">
-                            <div class="reviews__top">
-                                <img class="reviews__img" src="img/reviews.svg" alt="Яндекс отзывы" width="130" height="44" loading="lazy">
-                                <span class="reviews__stars" data-rateyo-rating="5">
-                                    <span class="sr-only">Рейтинг 5 из 5</span>
-                                </span>
-                            </div>
-                            <div class="reviews__text">
-                                <p>
-                                    С другой стороны реализация намеченных плановых заданий требуют определения и уточнения модели развития. Повседневная практика показывает, что дальнейшее развитие
-                                    различных форм деятельности влечет за собой процесс внедрения и модернизации существенных
-                                </p>
-                            </div>
-                            <span class="reviews__name">
-                                Юля У.
-                            </span>
-                            <time class="reviews__data" datetime="2022-03-23">
-                                23.03.2022
-                            </time>
+                            @include('./../components/cards/_review-card.html', {
+                                'rating' : '5',
+                                'text' : '<p>Совмещаю административную работу и рыбалку, ногти всегда в запущенном состоянии и требуют ухода. Обратился в студию Александры Корнеевой. Порадовало, что в студии все инструменты проходят стерилизацию через сухожар, а крафт-пакеты вскрываются прям при клиенте. Месторасположение тоже порадовало, в самом центре Хабаровска, есть удобная парковка, вход со стороны Войкова, не нужно идтиво двор</p>',
+                                'name' : 'Илья Астафьев',
+                                'datetime' : '2022-01-18',
+                                'date' : '18.01.2022'
+                            })
                         </li>
                         <li class="reviews__item swiper-slide">
-                            <div class="reviews__top">
-                                <img class="reviews__img" src="img/reviews.svg" alt="Яндекс отзывы" width="130" height="44" loading="lazy">
-                                <span class="reviews__stars" data-rateyo-rating="5">
-                                    <span class="sr-only">Рейтинг 5 из 5</span>
-                                </span>
-                            </div>
-                            <div class="reviews__text">
-                                <p>
-                                    С другой стороны реализация намеченных плановых заданий требуют определения и уточнения модели развития. Повседневная практика показывает, что дальнейшее развитие
-                                    различных форм деятельности влечет за собой процесс внедрения и модернизации существенных
-                                </p>
-                            </div>
-                            <span class="reviews__name">
-                                Юля У.
-                            </span>
-                            <time class="reviews__data" datetime="2022-03-23">
-                                23.03.2022
-                            </time>
+                            @include('./../components/cards/_review-card.html', {
+                            'rating' : '4',
+                            'text' : '<p>С другой стороны реализация намеченных плановых заданий требуют определения и уточнения модели развития. Повседневная практика показывает, что дальнейшее развитие различных форм деятельности влечет за собой процесс внедрения и модернизации существенных</p>',
+                            'name' : 'Юля У.',
+                            'datetime' : '2022-03-23',
+                            'date' : '23.03.2022'
+                            })
+                        </li>
+                        <li class="reviews__item swiper-slide">
+                            @include('./../components/cards/_review-card.html', {
+                            'rating' : '5',
+                            'text' : '<p>Посетила в первый раз. Делала педикюр. Осталась довольна. Огромный плюс для меня-это быстрая работа мастера. Была удивлена. И при этом скорость не влияет на качество. Удобное месторасположение. </p><p>Есть парковочные места. Помещение светлое, оборудовано всем необходимым. Александра заботится о репутации своего салона. Организовывает акции. Для себя решила пользоваться услугами данного салона постоянно.</p>',
+                            'name' : 'Жанна Вишнякова',
+                            'datetime' : '2022-08-30',
+                            'date' : '30.08.2022'
+                            })
                         </li>
                     </ul>
                 </div>
